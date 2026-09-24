@@ -69,6 +69,16 @@ class AgentHandler(BaseHTTPRequestHandler):
 
         if self.path == "/health":
 
+    self._send_json(
+        200,
+        {
+            "status": "ok",
+            "service": "AI Agent",
+            "port": PORT,
+        },
+    )
+    return
+
             self._send_html()
             return
 
