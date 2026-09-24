@@ -1,4 +1,5 @@
 import json
+import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
@@ -7,7 +8,7 @@ import agent
 
 
 HOST = "0.0.0.0"
-PORT = 8000
+PORT = int(os.environ.get("PORT", "8000"))
 
 BASE_DIR = Path(__file__).resolve().parent
 UI_FILE = BASE_DIR / "mobile_ui.html"
