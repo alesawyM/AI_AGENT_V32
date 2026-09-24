@@ -64,7 +64,8 @@ class AgentHandler(BaseHTTPRequestHandler):
         print(f"[HTTP] {self.address_string()} - {fmt % args}")
 
     def do_GET(self):
-        if self.path in {"/", "/index.html", "/mobile_ui.html"}:
+        request_path = self.path.split('?', 1)[0]
+        if request_path in {"/", "/index.html", "/mobile_ui.html"}:
             self._send_html()
             return
         if request_path == "/health":
@@ -224,6 +225,8 @@ if __name__ == "__main__":
         (HOST, PORT),
         AgentHandler,
     ).serve_forever()
+
+
 
 
 
