@@ -67,7 +67,7 @@ class AgentHandler(BaseHTTPRequestHandler):
         if self.path in {"/", "/index.html", "/mobile_ui.html"}:
             self._send_html()
             return
-        if self.path == "/health":
+        if request_path == "/health":
             self._send_json(
                 200,
                 {
@@ -78,7 +78,7 @@ class AgentHandler(BaseHTTPRequestHandler):
             )
             return
 
-        if self.path == "/project":
+        if request_path == "/project":
             project = agent.get_current_project()
             data = (
                 agent.project_context(int(project["id"]))
@@ -98,7 +98,7 @@ class AgentHandler(BaseHTTPRequestHandler):
             )
             return
 
-        if self.path == "/tasks":
+        if request_path == "/tasks":
             tasks = agent.load_tasks()
             self._send_json(
                 200,
@@ -113,7 +113,7 @@ class AgentHandler(BaseHTTPRequestHandler):
             )
             return
 
-        if self.path == "/memory":
+        if request_path == "/memory":
             memory = agent.load_memory()
             self._send_json(
                 200,
@@ -224,6 +224,7 @@ if __name__ == "__main__":
         (HOST, PORT),
         AgentHandler,
     ).serve_forever()
+
 
 
 
