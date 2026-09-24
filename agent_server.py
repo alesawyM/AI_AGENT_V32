@@ -63,7 +63,7 @@ class AgentHandler(BaseHTTPRequestHandler):
         print(f"[HTTP] {self.address_string()} - {fmt % args}")
 
     def do_GET(self):
-        if self.path in {"/", "/index.html"}:
+        if self.path in {"/", "/index.html", "/mobile_ui.html"}:
             self._send_html()
             return
 
