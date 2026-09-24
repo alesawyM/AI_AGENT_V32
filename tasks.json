@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "title": "مراجعة مشروع الـAI Agent",
+    "status": "completed",
+    "created_at": "2026-09-03T00:39:39",
+    "completed_at": "2026-09-03T00:40:52"
+  },
+  {
+    "id": 5,
+    "title": "بناء الذاكرة",
+    "status": "completed",
+    "project_id": 1,
+    "created_at": "2026-09-03T11:09:23",
+    "completed_at": "2026-09-03T11:29:07"
+  },
+  {
+    "id": 6,
+    "title": "بناء الأدوات",
+    "status": "completed",
+    "project_id": 1,
+    "created_at": "2026-09-03T11:09:23",
+    "completed_at": "2026-09-03T11:56:00"
+  },
+  {
+    "id": 7,
+    "title": "بناء نظام التخطيط",
+    "status": "completed",
+    "project_id": 1,
+    "created_at": "2026-09-03T11:09:23",
+    "completed_at": "2026-09-03T11:56:32"
+  },
+  {
+    "id": 8,
+    "title": "تحديد هدف المعرض",
+    "status": "pending",
+    "created_at": "2026-09-13T12:12:05",
+    "project_id": 14
+  },
+  {
+    "id": 9,
+    "title": "تحديد الموعد والمكان",
+    "status": "pending",
+    "created_at": "2026-09-13T12:12:05",
+    "project_id": 14
+  },
+  {
+    "id": 10,
+    "title": "إعداد الميزانية",
+    "status": "pending",
+    "created_at": "2026-09-13T12:12:05",
+    "project_id": 14
+  },
+  {
+    "id": 11,
+    "title": "إعداد قائمة المشاركين",
+    "status": "pending",
+    "created_at": "2026-09-13T12:12:05",
+    "project_id": 14
+  },
+  {
+    "id": 12,
+    "title": "تنظيم التجهيزات",
+    "status": "pending",
+    "created_at": "2026-09-13T12:12:05",
+    "project_id": 14
+  },
+  {
+    "id": 13,
+    "title": "إعداد خطة التسويق",
+    "status": "pending",
+    "created_at": "2026-09-13T12:12:05",
+    "project_id": 14
+  },
+  {
+    "id": 14,
+    "title": "تحديد الفريق وتوزيع المسؤوليات",
+    "status": "pending",
+    "created_at": "2026-09-13T12:12:05",
+    "project_id": 14
+  },
+  {
+    "id": 15,
+    "title": "مراجعة نهائية قبل المعرض",
+    "status": "pending",
+    "created_at": "2026-09-13T12:12:05",
+    "project_id": 14
+  }
+]

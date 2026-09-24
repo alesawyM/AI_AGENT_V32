@@ -1,0 +1,12 @@
+{
+  "active": false,
+  "request": "calculate 25 * 4",
+  "stage": "completed",
+  "workflow": "goal",
+  "data": {
+    "result": "completed",
+    "workflow": "integrated"
+  },
+  "created_at": "2026-09-22T19:49:11.246008",
+  "updated_at": "2026-09-22T19:49:11.286751"
+}

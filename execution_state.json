@@ -1,0 +1,1490 @@
+{
+  "active": false,
+  "request": "calculate 25 * 4",
+  "status": "completed",
+  "workflow": "goal",
+  "cycle": 0,
+  "replans": 0,
+  "updated_at": "2026-09-22T19:49:11.287388",
+  "history": [
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:23.354486",
+      "request": "اختبار تنفيذ المهمة"
+    },
+    {
+      "event": "replanning",
+      "timestamp": "2026-09-12T00:44:23.355550"
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:23.356152",
+      "details": {}
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:23.356984",
+      "request": "اختبار الإيقاف"
+    },
+    {
+      "event": "stopped",
+      "timestamp": "2026-09-12T00:44:23.357509",
+      "reason": "Controlled safety stop"
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:24.117847",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:24.118962",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:24.119893",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:26.005995",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:26.007141",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:26.008170",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:26.894984",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:26.896160",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:26.897113",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:27.889302",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:27.890407",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:27.891328",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:28.896752",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:28.897988",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:28.899915",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:28.938116",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:28.939217",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:28.940150",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:28.969352",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:28.970463",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:28.971564",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:29.915919",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:29.917415",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:29.918590",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:30.886763",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:30.887924",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:30.889285",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:31.831950",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:31.833118",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:31.834133",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:32.846429",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:32.847850",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:32.848989",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:32.877261",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:32.878507",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:32.879472",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:32.907278",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:32.908899",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:32.909978",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:33.920007",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:33.921155",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:33.922501",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:33.967382",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:33.968535",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:33.969564",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:34.000630",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:34.001874",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:34.002919",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:35.002549",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:35.003837",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:35.004759",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:35.032493",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:35.033674",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:35.034831",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:35.061210",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:35.062890",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:35.063912",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:36.059442",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:36.060639",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:36.062222",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:36.089938",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:36.091102",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:36.092856",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:36.123937",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:36.125054",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:36.126062",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:37.113115",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:37.114393",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:37.115375",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:37.143636",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:37.144888",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:37.146058",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:37.175054",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:37.176410",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:37.177464",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:38.197758",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:38.199058",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:38.200190",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:38.232164",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:38.233436",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:38.234408",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:38.266715",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:38.267873",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:38.268955",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:39.257464",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:39.258704",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:39.259706",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:39.285479",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:39.287140",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:39.288451",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:39.316749",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:39.318066",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:39.319182",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:40.342249",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:40.343672",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:40.345191",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:40.376787",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:40.378023",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:40.379233",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:40.409411",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:40.410887",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:40.412037",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:41.402737",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:41.404436",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:41.405632",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:41.435290",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:41.436489",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:41.437642",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:41.465183",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:41.466550",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:41.467637",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:42.477161",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:42.478583",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:42.479985",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:42.508615",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:42.509999",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:42.511137",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:42.539173",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:42.540447",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:42.541678",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:43.564537",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:43.566039",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:43.567320",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:43.596081",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:43.597625",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:43.598818",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:43.627057",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:43.628411",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:43.629803",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:44.693405",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:44.694870",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:44.696131",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:44.722573",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:44.724166",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:44.725369",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:44:44.751539",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:44:44.752881",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:44:44.754555",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:45:13.899462",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:45:13.900962",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:45:13.902351",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:45:13.935777",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:45:13.937344",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:45:13.939592",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:45:13.974352",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:45:13.975976",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:45:13.977355",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:45:14.945024",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:45:14.946358",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:45:14.947585",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:45:14.975617",
+      "request": "المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:45:14.977087",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:45:14.978276",
+      "details": {
+        "request": "المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:45:15.005537",
+      "request": "tasks"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:45:15.006836",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:45:15.008209",
+      "details": {
+        "request": "tasks",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:49:32.385794",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:49:32.387914",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:49:32.390556",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:49:46.271231",
+      "request": "ما هو لوني المفضل؟"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:49:46.315187",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:49:46.317221",
+      "details": {
+        "request": "ما هو لوني المفضل؟",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T00:49:58.262309",
+      "request": "احسب 25 * 4"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T00:49:58.306713",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T00:49:58.308136",
+      "details": {
+        "request": "احسب 25 * 4",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T11:45:44.890441",
+      "request": "help"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T11:45:44.922133",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T11:45:44.923265",
+      "details": {
+        "request": "help",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T12:00:29.580639",
+      "request": "تقدر تساعدني في بناء منظومه ترتيب جمه ومتابعة عقاراتي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T12:00:29.633158",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T12:00:29.635599",
+      "details": {
+        "request": "تقدر تساعدني في بناء منظومه ترتيب جمه ومتابعة عقاراتي",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T12:07:25.226643",
+      "request": "تقدر تساعدني في بناء منظومه ترتيب وجمع ومتابعة عقاراتي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T12:07:25.257900",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T12:07:25.259204",
+      "details": {
+        "request": "تقدر تساعدني في بناء منظومه ترتيب وجمع ومتابعة عقاراتي",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T12:08:32.022227",
+      "request": "تقدر تساعدني في بناء منظومه ترتيب وجمع ومتابعة عقاراتي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T12:08:32.052419",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T12:08:32.053560",
+      "details": {
+        "request": "تقدر تساعدني في بناء منظومه ترتيب وجمع ومتابعة عقاراتي",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T12:10:47.222321",
+      "request": "تقدر تساعدني في بناء منظومه ترتيب وجمع ومتابعة عقاراتي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T12:10:47.252680",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T12:10:47.253946",
+      "details": {
+        "request": "تقدر تساعدني في بناء منظومه ترتيب وجمع ومتابعة عقاراتي",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-12T12:11:42.627364",
+      "request": "تقدر تساعدني في بناء منظومه ترتيب وجمع ومتابعة عقاراتي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-12T12:11:42.658321",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-12T12:11:42.659508",
+      "details": {
+        "request": "تقدر تساعدني في بناء منظومه ترتيب وجمع ومتابعة عقاراتي",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-13T12:12:05.654934",
+      "request": "أريد إنشاء مشروع جديد باسم إدارة ممتلكاتي وعقاراتي، وأريد أن يساعدني هذا المشروع في تنظيم جميع عقاراتي ومستنداتها ومتابعة الدخل والمصاريف والمهام والمواعيد المهمة."
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-13T12:12:06.016774",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-13T12:12:06.017952",
+      "details": {
+        "request": "أريد إنشاء مشروع جديد باسم إدارة ممتلكاتي وعقاراتي، وأريد أن يساعدني هذا المشروع في تنظيم جميع عقاراتي ومستنداتها ومتابعة الدخل والمصاريف والمهام والمواعيد المهمة.",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-13T12:13:08.515352",
+      "request": "أريد إنشاء مشروع جديد باسم إدارة ممتلكاتي وعقاراتي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-13T12:13:08.522075",
+      "details": {
+        "execution_status": "failed",
+        "review_status": "needs_attention"
+      }
+    },
+    {
+      "event": "stopped",
+      "timestamp": "2026-09-13T12:13:08.523602",
+      "reason": "prepare_recovery_plan"
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-13T12:16:56.334198",
+      "request": "أريد إنشاء مشروع جديد باسم إدارة ممتلكاتي وعقاراتي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-13T12:16:56.340397",
+      "details": {
+        "execution_status": "failed",
+        "review_status": "needs_attention"
+      }
+    },
+    {
+      "event": "stopped",
+      "timestamp": "2026-09-13T12:16:56.341589",
+      "reason": "prepare_recovery_plan"
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-15T12:44:57.450489",
+      "request": "اعرض المهام"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-15T12:44:57.451824",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-15T12:44:57.452933",
+      "details": {
+        "request": "اعرض المهام",
+        "workflow": "direct"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-15T12:46:07.251539",
+      "request": "أريد إنشاء مشروع جديد باسم اختبار نهائي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-15T12:46:07.257105",
+      "details": {
+        "execution_status": "failed",
+        "review_status": "needs_attention"
+      }
+    },
+    {
+      "event": "stopped",
+      "timestamp": "2026-09-15T12:46:07.258239",
+      "reason": "prepare_recovery_plan"
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-15T12:54:34.110192",
+      "request": "أريد إنشاء مشروع جديد باسم اختبار نهائي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-15T12:54:34.116503",
+      "details": {
+        "execution_status": "failed",
+        "review_status": "needs_attention"
+      }
+    },
+    {
+      "event": "stopped",
+      "timestamp": "2026-09-15T12:54:34.117820",
+      "reason": "prepare_recovery_plan"
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-15T12:55:58.379677",
+      "request": "أريد إنشاء مشروع جديد باسم اختبار نهائي"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-15T12:55:58.385945",
+      "details": {
+        "execution_status": "failed",
+        "review_status": "needs_attention"
+      }
+    },
+    {
+      "event": "stopped",
+      "timestamp": "2026-09-15T12:55:58.387128",
+      "reason": "prepare_recovery_plan"
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-22T19:41:18.181559",
+      "request": "create file v32_planner_test.txt then read it"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-22T19:41:23.828232",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-22T19:41:23.830430",
+      "details": {
+        "request": "create file v32_planner_test.txt then read it",
+        "workflow": "integrated"
+      }
+    },
+    {
+      "event": "started",
+      "timestamp": "2026-09-22T19:49:11.246727",
+      "request": "calculate 25 * 4"
+    },
+    {
+      "event": "reviewed",
+      "timestamp": "2026-09-22T19:49:11.285940",
+      "details": {
+        "execution_status": "completed",
+        "review_status": "completed"
+      }
+    },
+    {
+      "event": "completed",
+      "timestamp": "2026-09-22T19:49:11.287382",
+      "details": {
+        "request": "calculate 25 * 4",
+        "workflow": "integrated"
+      }
+    }
+  ]
+}

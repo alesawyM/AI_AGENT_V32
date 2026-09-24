@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI Agent Dashboard</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f3f4f6;color:#111;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.wrap{max-width:760px;margin:auto;padding:16px 14px 30px}
+header{background:#111;color:#fff;border-radius:22px;padding:18px 18px 16px;margin-bottom:14px}
+h1{margin:0;font-size:25px}.sub{opacity:.7;margin-top:5px;font-size:13px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.card{background:#fff;border-radius:18px;padding:15px;box-shadow:0 3px 16px #0000000c}
+.label{color:#777;font-size:13px}.value{font-size:23px;font-weight:800;margin-top:4px}
+.progress{height:9px;background:#e5e7eb;border-radius:20px;overflow:hidden;margin-top:9px}
+.bar{height:100%;width:0;background:#111;transition:.3s}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
+button{border:0;border-radius:15px;padding:13px;font-size:15px;font-weight:700;background:#111;color:#fff}
+button.alt{background:#fff;color:#111;border:1px solid #ddd}
+.chat{background:#fff;border-radius:20px;padding:12px;min-height:180px;box-shadow:0 3px 16px #0000000c}
+.msg{padding:12px 14px;border-radius:16px;margin:8px 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.user{background:#111;color:#fff;margin-right:12%;}.agent{background:#f0f1f3;margin-left:8%}
+input{width:100%;border:1px solid #ddd;border-radius:16px;padding:15px;font-size:16px;margin-top:10px;outline:none}
+.send{width:100%;margin-top:9px}
+.small{font-size:12px;color:#777;text-align:center;margin-top:12px}
+.status{display:inline-block;padding:5px 9px;border-radius:10px;background:#eee;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>🤖 AI Agent</h1>
+  <div class="sub" id="projectName">جاري تحميل المشروع...</div>
+</header>
+
+<div class="grid">
+  <div class="card">
+    <div class="label">المشروع الحالي</div>
+    <div class="value" id="projectId">—</div>
+  </div>
+  <div class="card">
+    <div class="label">الحالة</div>
+    <div class="value" id="projectStatus">—</div>
+  </div>
+  <div class="card">
+    <div class="label">التقدم</div>
+    <div class="value" id="progressText">—</div>
+    <div class="progress"><div class="bar" id="progressBar"></div></div>
+  </div>
+  <div class="card">
+    <div class="label">المهام</div>
+    <div class="value" id="tasksText">—</div>
+  </div>
+</div>
+
+<div class="actions">
+  <button onclick="quick('المشروع الحالي')">📁 المشروع الحالي</button>
+  <button onclick="quick('المهام')">📋 المهام</button>
+  <button class="alt" onclick="quick('الذاكرة')">🧠 الذاكرة</button>
+  <button class="alt" onclick="quick('حالة الوكيل')">⚙️ حالة الوكيل</button>
+</div>
+
+<div class="chat" id="chat">
+  <div class="msg agent">جاهز. اختر أمرًا سريعًا أو اكتب طلبك أدناه.</div>
+</div>
+
+<input id="command" placeholder="اكتب أمرًا للـAI Agent..." autocomplete="off">
+<button class="send" onclick="sendCommand()">إرسال</button>
+<div class="small" id="connection">جاري الاتصال...</div>
+</div>
+
+<script>
+const chat=document.getElementById('chat');
+const input=document.getElementById('command');
+
+function addMsg(text,who){
+  const d=document.createElement('div');
+  d.className='msg '+who;
+
+  if(who==='agent'){
+    d.innerHTML=pretty(text);
+  }else{
+    d.textContent=String(text);
+  }
+
+  chat.appendChild(d);
+  d.scrollIntoView({behavior:'smooth'});
+}
+function pretty(v){
+  if(v===null||v===undefined)return '—';
+
+  if(typeof v==='string'){
+    const s=v.trim();
+
+    // إذا كان النص يحتوي JSON، حوّله إلى كائن
+    if((s.startsWith('{')&&s.endsWith('}'))||(s.startsWith('[')&&s.endsWith(']'))){
+      try{
+        return pretty(JSON.parse(s));
+      }catch(e){}
+    }
+
+    // تحويل \n النصية إلى أسطر فعلية
+    if(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/.test(v.trim())){
+  return '\u200E' + v.trim() + '\u200E';
+}
+
+return v.replace(/\\n/g,'\n');
+  }
+
+  if(Array.isArray(v)){
+    return v.map((x,i)=>`${i+1}. ${pretty(x)}`).join('\n');
+  }
+
+  if(typeof v==='object'){
+    const labels={
+      id:'المعرف',
+      name:'الاسم',
+      title:'العنوان',
+      goal:'الهدف',
+      status:'الحالة',
+      progress_percent:'نسبة التقدم',
+      completed_tasks:'المهام المكتملة',
+      total_tasks:'إجمالي المهام',
+      project_id:'رقم المشروع',
+      task_ids:'أرقام المهام',
+      created_at:'تاريخ الإنشاء',
+      completed_at:'تاريخ الإكمال',
+      updated_at:'آخر تحديث',
+      workflow:'المسار',
+      message:'الرسالة',
+
+      permanent:'🟢 المعلومات الدائمة',
+      projects:'📁 المشاريع',
+      tasks:'📋 المهام',
+      decisions:'⚖️ القرارات',
+      preferences:'❤️ التفضيلات',
+      temporary:'⏳ المعلومات المؤقتة',
+      user_profile:'👤 ملف المستخدم',
+      important_information:'⭐ معلومات مهمة',
+      actions:'🎯 الإجراءات',
+      last_memory_reasoning:'🧠 آخر سبب للحفظ'
+    };
+
+    return Object.entries(v).map(([k,val])=>{
+      const label=labels[k]||k;
+
+      if(k==='task_ids'&&Array.isArray(val)){
+        val=val.join(', ');
+      }
+
+      return `${label}: ${pretty(val)}`;
+    }).join('\n');
+  }
+
+  return String(v);
+}
+function extractProject(data){
+  return data?.data?.current_project ?? {};
+}
+async function api(path, options = {}) {
+
+  const response = await fetch(path, options);
+
+  const raw = await response.text();
+
+  let data = {};
+
+  try {
+
+    data = raw ? JSON.parse(raw) : {};
+
+  } catch (e) {
+
+    data = {
+      status: "error",
+      error: raw || "Invalid server response"
+    };
+
+  }
+
+  if (!response.ok) {
+
+    const message =
+      data?.response ||
+      data?.error ||
+      (
+        Array.isArray(data?.errors)
+          ? data.errors.join(" | ")
+          : ""
+      ) ||
+      ("HTTP " + response.status);
+
+    const error = new Error(message);
+
+    error.status = response.status;
+    error.data = data;
+
+    throw error;
+  }
+
+  return data;
+}
+
+
+async function refresh() {
+
+  try {
+
+    document.getElementById(
+      'connection'
+    ).textContent = 'جاري التحقق من الاتصال...';
+
+    const [health, projectData] =
+      await Promise.all([
+
+        api('/health'),
+
+        api('/project')
+
+      ]);
+
+    if (health?.status !== 'ok') {
+
+      throw new Error(
+        'الخدمة لم تؤكد جاهزيتها'
+      );
+
+    }
+
+    const p = extractProject(projectData);
+
+    document.getElementById(
+      'projectName'
+    ).textContent =
+      p?.name || 'لا يوجد مشروع حالي';
+
+    document.getElementById(
+      'projectId'
+    ).textContent =
+      p?.id ?? '—';
+
+    document.getElementById(
+      'projectStatus'
+    ).textContent =
+      p?.status || '—';
+
+    const progress =
+      Number(p?.progress_percent ?? 0);
+
+    document.getElementById(
+      'progressText'
+    ).textContent =
+      progress + '%';
+
+    document.getElementById(
+      'progressBar'
+    ).style.width =
+      Math.max(
+        0,
+        Math.min(100, progress)
+      ) + '%';
+
+    const completed =
+      Number(p?.completed_tasks ?? 0);
+
+    const total =
+      Number(p?.total_tasks ?? 0);
+
+    document.getElementById(
+      'tasksText'
+    ).textContent =
+      completed + ' / ' + total;
+
+    document.getElementById(
+      'connection'
+    ).textContent =
+      'متصل بالسيرفر والوكيل ✅';
+
+  } catch (error) {
+
+    console.error(
+      'Connection error:',
+      error
+    );
+
+    document.getElementById(
+      'connection'
+    ).textContent =
+      '❌ تعذر الاتصال بالسيرفر';
+
+  }
+}
+async function sendCommand(){
+  const text=input.value.trim();
+  if(!text)return;
+
+  input.value='';
+  addMsg(text,'user');
+
+  try{
+    const data=await api('/command',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({command:text})
+    });
+
+    const out=data?.response ??
+              pretty(data?.results ?? data?.data ?? data);
+
+    addMsg(out,'agent');
+    await refresh();
+
+} catch (error) {
+
+  console.error(
+    'Command error:',
+    error
+  );
+
+  addMsg(
+    '❌ ' + error.message,
+    'agent'
+  );
+
+}
+}
+function quick(text){input.value=text;sendCommand()}
+input.addEventListener('keydown',e=>{if(e.key==='Enter')sendCommand()});
+refresh();
+setInterval(refresh,15000);
+</script>
+</body>
+</html>

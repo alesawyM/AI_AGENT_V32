@@ -1,0 +1,55 @@
+{
+  "permanent": {
+    "memory_20260902_235631": {
+      "value": "أنني أحب القهوة",
+      "updated_at": "2026-09-02T23:56:31"
+    },
+    "favorite_color": {
+      "value": "أن لوني المفضل أخضر",
+      "updated_at": "2026-09-12T00:35:58"
+    },
+    "user_name": {
+      "value": "أن اسمي أحمد",
+      "updated_at": "2026-09-09T20:00:45"
+    }
+  },
+  "projects": {
+    "last_memory_reasoning": {
+      "value": {
+        "goal": "تذكّر أن مشروعي الحالي اسمه AI Assistant، ثم أنشئ ملف memory_reasoning_final_2.txt واكتب فيه \"AI Assistant\"، وبعدها اقرأ الملف وتحقق من المحتوى.",
+        "references": [
+          "operational.projects.1"
+        ],
+        "at": "2026-09-03T17:30:58"
+      },
+      "updated_at": "2026-09-03T17:30:58"
+    }
+  },
+  "tasks": {},
+  "decisions": {},
+  "preferences": {
+    "favorite_color": {
+      "value": "أزرق",
+      "updated_at": "2026-09-07T18:30:40"
+    },
+    "preferred_language": {
+      "value": "English",
+      "updated_at": "2026-09-07T18:30:40"
+    },
+    "favorite_food": {
+      "value": "كبسة",
+      "updated_at": "2026-09-07T18:30:40"
+    },
+    "response_length": "short",
+    "user_name": {
+      "value": "Ahmed",
+      "updated_at": "2026-09-07T18:30:40"
+    }
+  },
+  "temporary": {
+    "user_profile": {},
+    "business": {},
+    "important_information": []
+  },
+  "actions": {}
+}

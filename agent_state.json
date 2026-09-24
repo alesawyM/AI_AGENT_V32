@@ -1,0 +1,30 @@
+{
+  "version": "v31-integrated",
+  "run_id": "2026-09-22T19:49:11",
+  "goal": "calculate 25 * 4",
+  "workflow": "integrated",
+  "status": "completed",
+  "plan": [
+    {
+      "action": "calculator",
+      "expression": "25 * 4"
+    }
+  ],
+  "current_step": 1,
+  "results": [
+    100
+  ],
+  "errors": [],
+  "repair_events": [],
+  "verification_events": [
+    {
+      "step": 0,
+      "action": "calculator",
+      "verified": true,
+      "reason": "Execution completed successfully.",
+      "timestamp": "2026-09-22T19:49:11"
+    }
+  ],
+  "started_at": "2026-09-22T19:49:11",
+  "updated_at": "2026-09-22T19:49:11"
+}
