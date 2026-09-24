@@ -1,4 +1,4 @@
-import json
+﻿import json
 import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -66,20 +66,15 @@ class AgentHandler(BaseHTTPRequestHandler):
         if self.path in {"/", "/index.html", "/mobile_ui.html"}:
             self._send_html()
             return
-
         if self.path == "/health":
-
-    self._send_json(
-        200,
-        {
-            "status": "ok",
-            "service": "AI Agent",
-            "port": PORT,
-        },
-    )
-    return
-
-            self._send_html()
+            self._send_json(
+                200,
+                {
+                    "status": "ok",
+                    "service": "AI Agent",
+                    "port": PORT,
+                },
+            )
             return
 
         if self.path == "/project":
@@ -228,3 +223,4 @@ if __name__ == "__main__":
         (HOST, PORT),
         AgentHandler,
     ).serve_forever()
+
