@@ -1,4 +1,4 @@
-
+﻿
 import json
 import os
 import re
@@ -508,7 +508,13 @@ def next_id(items: List[Dict[str, Any]]) -> int:
     return max(ids, default=0) + 1
 
 
-def add_task(title: str, project_id: Optional[int] = None) -> Dict[str, Any]:
+def add_task(
+    title: str,
+    project_id: Optional[int] = None,
+    reminder_date: Optional[str] = None,
+    reminder_hour: Optional[int] = None,
+    reminder_minute: Optional[int] = None,
+) -> Dict[str, Any]:
     tasks = load_tasks()
     task = {
         "id": next_id(tasks),
@@ -518,6 +524,12 @@ def add_task(title: str, project_id: Optional[int] = None) -> Dict[str, Any]:
     }
     if project_id is not None:
         task["project_id"] = int(project_id)
+    if reminder_date:
+        task["reminder_date"] = reminder_date
+    if reminder_hour is not None:
+        task["reminder_hour"] = int(reminder_hour)
+    if reminder_minute is not None:
+        task["reminder_minute"] = int(reminder_minute)
     tasks.append(task)
     save_tasks(tasks)
     if project_id is not None:
@@ -716,7 +728,13 @@ def attach_task(project_id: int, task_id: int) -> bool:
     refresh_project(project_id)
     return True
 
-def add_project_task(project_id: int, title: str) -> Dict[str, Any]:
+def add_project_task(
+    project_id: int,
+    title: str,
+    reminder_date: Optional[str] = None,
+    reminder_hour: Optional[int] = None,
+    reminder_minute: Optional[int] = None,
+) -> Dict[str, Any]:
     """Add a task to a project and refresh project statistics."""
 
     project = get_project(project_id)
@@ -726,7 +744,10 @@ def add_project_task(project_id: int, title: str) -> Dict[str, Any]:
 
     task = add_task(
         title,
-        project_id=int(project_id)
+        project_id=int(project_id),
+        reminder_date=reminder_date,
+        reminder_hour=reminder_hour,
+        reminder_minute=reminder_minute,
     )
 
     # Always refresh project statistics after adding a task.
@@ -1600,6 +1621,53 @@ def build_plan(text: str) -> List[Dict[str, Any]]:
         }]
     
     # -----------------------------
+    # Natural-language reminder/task command
+    # -----------------------------
+    reminder_match = re.search(
+        r"^(?:ذكرني|ذكّرني)\s+(?:غدًا|غدا)\s+(?:الساعة\s+)?(\d{1,2})(?::(\d{2}))?\s*(صباحًا|صباحا|مساءً|مساء)?\s+(?:أن\s+)?(?:أتصل|اتصل|أن\s+أتصل)\s+(.+?)\s*$",
+        text,
+        re.IGNORECASE,
+    )
+
+    if reminder_match:
+        hour = int(reminder_match.group(1))
+        minute = int(reminder_match.group(2) or 0)
+        period = reminder_match.group(3)
+        reminder_text = reminder_match.group(4).strip()
+
+        if period in ("مساءً", "مساء") and hour < 12:
+            hour += 12
+        elif period in ("صباحًا", "صباحا") and hour == 12:
+            hour = 0
+
+        current_project = get_current_project()
+
+        task_step = {
+            "action": "add_project_task" if current_project else "add_task",
+            "title": reminder_text,
+            "reminder_date": "tomorrow",
+            "reminder_hour": hour,
+            "reminder_minute": minute,
+        }
+
+        if current_project:
+            task_step["project_id"] = current_project["id"]
+
+        return normalize_plan([
+            task_step,
+            {
+                "action": "list_tasks",
+                "verify_title": reminder_text,
+            },
+            {
+                "action": "answer",
+                "message": (
+                    f"تمت إضافة التذكير لغدٍ الساعة "
+                    f"{hour:02d}:{minute:02d}: {reminder_text}"
+                ),
+            },
+        ], text)
+    # -----------------------------
     # Deterministic multi-step task commands
     # -----------------------------
     task_match = re.search(
@@ -1977,7 +2045,13 @@ def execute_step(step: Dict[str, Any], previous_results: List[Any]) -> Any:
         return message
 
     if action == "add_task":
-        return add_task(step.get("title", "New task"), step.get("project_id"))
+        return add_task(
+            step.get("title", "New task"),
+            step.get("project_id"),
+            step.get("reminder_date"),
+            step.get("reminder_hour"),
+            step.get("reminder_minute"),
+        )
 
     if action == "list_tasks":
         return load_tasks()
@@ -2034,7 +2108,13 @@ def execute_step(step: Dict[str, Any], previous_results: List[Any]) -> Any:
             if current is None:
                 raise ValueError("No current project is available")
             project_id = current["id"]
-        return add_project_task(int(project_id), step.get("title", "New project task"))
+        return add_project_task(
+            int(project_id),
+            step.get("title", "New project task"),
+            step.get("reminder_date"),
+            step.get("reminder_hour"),
+            step.get("reminder_minute"),
+        )
 
     raise ValueError(f"Unsupported action: {action}")
 
@@ -3971,3 +4051,11 @@ def process_command(command: str) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     run()
+
+
+
+
+
+
+
+
