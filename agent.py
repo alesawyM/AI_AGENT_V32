@@ -1633,7 +1633,7 @@ def build_plan(text: str) -> List[Dict[str, Any]]:
         hour = int(reminder_match.group(1))
         minute = int(reminder_match.group(2) or 0)
         period = reminder_match.group(3)
-        reminder_text = reminder_match.group(4).strip()
+        reminder_text = "اتصل " + reminder_match.group(4).strip()
 
         if period in ("مساءً", "مساء") and hour < 12:
             hour += 12
@@ -4051,6 +4051,7 @@ def process_command(command: str) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     run()
+
 
 
 
