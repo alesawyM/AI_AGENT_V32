@@ -2996,15 +2996,30 @@ def _process_command_core(command: str) -> Dict[str, Any]:
 
             if value:
 
-                key = (
-                    "memory_"
-                    + datetime.now().strftime("%Y%m%d_%H%M%S")
-                )
+                key = canonical_memory_key(value, value)
+
+                # Extract the actual value from common "remember" statements.
+                if key == "favorite_color":
+                    match = re.search(
+                        r"(?:اللون\s+المفضل.*?|لوني\s+المفضل)\s*(?:هو|is)\s*(.+)$",
+                        value,
+                        re.IGNORECASE,
+                    )
+                    if match:
+                        value = match.group(1).strip()
+
+                category = "preferences" if key in {
+                    "favorite_color",
+                    "favorite_food",
+                    "preferred_language",
+                    "response_length",
+                    "user_name",
+                } else "permanent"
 
                 remember(
                     key,
                     value,
-                    category="permanent",
+                    category=category,
                 )
 
                 return {
@@ -4051,6 +4066,9 @@ def process_command(command: str) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     run()
+
+
+
 
 
 
